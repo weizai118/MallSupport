@@ -1,0 +1,14 @@
+{
+  "name": "MallSupport01",
+  "version": "1.0.0",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    /*express 4x移除了body-parser,为了解析body中的json数据,需要安装这个模块*/
+    "express": "^4.16.4",
+    "express-async-errors": "^3.1.1",
+    /*express捕获promise异步错误*/
+    "mongoose": "^5.3.4",
+    "morgan": "^1.9.1"
+    /*日志处理模块*/
+  }
+}
