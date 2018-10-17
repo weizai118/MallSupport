@@ -1,6 +1,7 @@
 
 **1.引入模块**
     npm i body-parser express express-async-errors mongoose morgan
+
 **2.搭建环境**
     -package.json       ---> `记录引入的模块以及版本号`
     -app.js             ---> `入口类/启动类`
