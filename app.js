@@ -3,23 +3,32 @@
 require('express-async-errors');
 //目的是运行数据库
 require('./db');
-
+//自定义配置
 let config = require('./config');
 let express = require('express');
+//日志处理模块
+let morgan = require('morgan');
 let userRouter = require('./router/user');
+let categoryRouter = require('./router/category');
+
+//自定义中间件
 let mdres = require('./middleware/middleware-response');
 let app = express();
 
 //使用自定义加强response中间件
 app.use(mdres);
+//使用自定义加强token中间件/*还有问题!*/
+// app.use(require('./middleware/middleware-token'));
 
 // 解析json格式的数据
 app.use(express.json());
-
+app.use(morgan('combined'));
 // console.log(config.PORT);
 
 
 app.use('/user', userRouter);
+app.use('/category', categoryRouter);
+
 //全局错误处理中间件
 app.use((err, req, res, next) => {
     res.doFail(err);
