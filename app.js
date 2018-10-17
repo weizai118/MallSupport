@@ -9,6 +9,9 @@ let app = express();
 // app.use('/user', userRouter);
 
 
+// 解析json格式的数据
+app.use(express.json());
+
 console.log(config.PORT);
 
 

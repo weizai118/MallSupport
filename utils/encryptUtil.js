@@ -85,4 +85,4 @@ module.exports = {
     aesEncrypt, aesDecrypt,
     rsaEncrypt, rsaDecrypt,
     base64Encode, base64Decode
-}
+};
