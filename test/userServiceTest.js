@@ -3,7 +3,7 @@ let userService = require('../service/user');
 
 async function userServiceTest() {
     let user = {
-        username: "齐德龙",
+        username: "alice",
         password: '123',
         age: 16,
     };

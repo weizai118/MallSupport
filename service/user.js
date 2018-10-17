@@ -56,14 +56,18 @@ async function isNotExistByUsername(username) {
 async function login(user) {
     await isNotExistByUsername(user.username);
     let passowrd = user.password;
-    if (passowrd == null && passowrd.trim().length == 0) {
+    if (passowrd === null || passowrd.trim().length === 0) {
         throw Error('密码不能为空')
     }
     //将用户输入的密码加密
-    user.password = encryptUtil.md5Hmac(user.password, user.username);
+    passowrd = encryptUtil.md5Hmac(user.password, user.username);
+    user.password = passowrd;
     //根据输入的用户名查找用户
     user = await User.findOne(user);
     //因为不能将密码直接返回,需要将密码置空
+    // if (user.password !== passowrd) {
+    //     throw Error('您输入的密码有误,请重新输入')
+    // }
     user.password = '';
     return user;
 }
