@@ -15,7 +15,6 @@ let productSchema = new mongoose.Schema({
         default: 0
     },
     category: {
-        //TODO:商品分类需要和categories表联系起来----------------------
         type: mongoose.Schema.Types.ObjectId,
         required: [true, '分类id不能为空']
     },

@@ -1,16 +1,17 @@
 let Category = require('../model/category');
-
+let config = require('../config');
 /**
  * 获取每页的商品种类数据
  * @param page
  * @returns {Promise<void>}
- * TODO 还未完全完成
+ * TODO
  */
-async function getCategoryByPage(page) {
+async function getCategoryByPage(page = 1) {
     //(page-1)*size
     //skip 偏移量=每次跳过多少条数据  offset = (page-1)*size
+    let offset = (page - 1) * config.PAGE_SIZE;
     //limit 每页显示多少条数据
-    let result = await Category.find().skip(2).limit(2);
+    let result = await Category.find().skip(offset).limit(config.PAGE_SIZE);
     return result;
 }
 

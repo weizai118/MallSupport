@@ -39,7 +39,7 @@ router.post('/login', async (req, res) => {
         //给token定义有效期时间
         expire: Date.now() + config.TOKEN_EXPIRE
     };
-//采用对称加密加密token;参数一:token字符串值;参数二:自定义的token_key
+    //采用对称加密加密token;参数一:token字符串值;参数二:自定义的token_key
     let aesEncrypt = encryptUtil.aesEncrypt(JSON.stringify(token), config.TOKEN_KEY);
     res.doSucess(aesEncrypt)
 });

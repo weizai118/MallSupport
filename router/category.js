@@ -4,11 +4,12 @@ let categoryRouter = require('express').Router();
 /**
  * 分页查询商品种类
  * @param page
- * @url http://8000/category get
- * TODO 还未完全完成
+ * @url http://8000/category?page=2 get请求
+ * TODO
  */
-categoryRouter.get("/:page", async (req, res) => {
-    let result = await categoryService.getCategoryByPage(page)
+categoryRouter.get("/", async (req, res) => {
+    let page = req.query.page;
+    let result = await categoryService.getCategoryByPage(page);
     res.doSucess(result)
 });
 
