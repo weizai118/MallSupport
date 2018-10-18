@@ -25,7 +25,6 @@ app.use(require('./middleware/middleware-token'));
 // 解析json格式的数据
 app.use(express.json());
 app.use(morgan('combined'));
-// console.log(config.PORT);
 
 
 app.use('/user', userRouter);
