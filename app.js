@@ -25,7 +25,6 @@ app.use(require('./middleware/middleware-token'));
 // 解析json格式的数据
 app.use(express.json());
 app.use(morgan('combined'));
-// console.log(config.PORT);
 
 
 app.use('/user', userRouter);
@@ -37,7 +36,6 @@ app.use('/order', require('./router/order'));
 app.use((err, req, res, next) => {
     res.doFail(err);
 });
-
 
 //开启服务器
 app.listen(config.PORT);
