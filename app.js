@@ -29,6 +29,7 @@ app.use(morgan('combined'));
 app.use('/user', userRouter);
 app.use('/category', categoryRouter);
 app.use('/product', require('./router/product'));
+app.use('/order', require('./router/order'));
 
 //全局错误处理中间件
 app.use((err, req, res, next) => {

@@ -7,7 +7,7 @@ async function testProduct() {
         name: "iphone16",
         price: '89999',
         //存货量
-        stock: 2000,
+        stock: 200,
         category: ""
         // category:{
         //     //TODO:商品分类需要和categories表联系起来----------------------

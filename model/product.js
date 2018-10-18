@@ -9,7 +9,7 @@ let productSchema = new mongoose.Schema({
         type: String,
         required: [true, '商品价格不能为空'],
     },
-    //存活量
+    //存货量
     stock: {
         type: Number,
         default: 0
