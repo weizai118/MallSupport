@@ -26,7 +26,7 @@ module.exports = (req, res, next) => {
     let reqUrl = req.url;
 
     outer:for (let i = 0; i < permissions.length; i++) {
-        //定义旗帜变量
+        //定义旗帜变量,默认false,没有权限访问
         let isUrl = false;
         //获取权限对象
         let permission = permissions[i];
@@ -43,6 +43,7 @@ module.exports = (req, res, next) => {
                 }
             }
         }
+        //如果是false,则没有权限访问
         if (!isUrl) {
             throw Error('您没有权限进行操作')
         }
