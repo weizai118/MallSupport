@@ -2,7 +2,7 @@
 
 **1.引入模块**
 
-    npm i body-parser express express-async-errors mongoose morgan
+    npm i body-parser express express-async-errors mongoose morgan big.js
 
 **2.搭建环境**
 
@@ -27,3 +27,9 @@
     -router
         -user.js
         -...
+    -deploy.yml        ---> 集群搭建
+    -middleware
+        -middleware-permission.js --->权限校验
+        -middleware-response.js   --->加强response对象方法
+        -middleware-token.js      --->token校验
+    
