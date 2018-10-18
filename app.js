@@ -38,6 +38,6 @@ app.use((err, req, res, next) => {
     res.doFail(err);
 });
 
-
+console.log(config.PORT);
 //开启服务器
 app.listen(config.PORT);

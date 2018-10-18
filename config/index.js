@@ -3,7 +3,7 @@ let nodeEnv = process.env.NODE_ENV;
 
 let config = null;
 
-if (nodeEnv === 'prod') {
+if (nodeEnv === 'production') {
     //如果等于prod,配置文件就获取prod中的配置
     config = require('./prod')
 } else {
