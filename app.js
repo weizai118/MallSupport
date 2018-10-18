@@ -13,12 +13,14 @@ let categoryRouter = require('./router/category');
 
 //自定义中间件
 let mdres = require('./middleware/middleware-response');
+
 let app = express();
 
 //使用自定义加强response中间件
 app.use(mdres);
-//使用自定义加强token中间件/*还有问题!*/
-// app.use(require('./middleware/middleware-token'));
+//自定义中间件校验token
+app.use(require('./middleware/middleware-token'));
+
 
 // 解析json格式的数据
 app.use(express.json());

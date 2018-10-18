@@ -6,7 +6,7 @@ let encryptUtil = require('../utils/encryptUtil');
 let router = express.Router();
 
 //用户注册
-router.post('/', async (req, res) => {
+router.post('/regist', async (req, res) => {
     let body = req.body;
     let result = await userService.regist(body);
     res.doSucess(result);
