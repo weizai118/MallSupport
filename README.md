@@ -32,4 +32,14 @@
         -middleware-permission.js --->权限校验
         -middleware-response.js   --->加强response对象方法
         -middleware-token.js      --->token校验
-    
+
+​        
+​    生成订单的实现逻辑:
+
+![生成订单的逻辑](F:\BlockChain_Class\09.NodeJs\day05\生成订单的逻辑.png)
+
+
+
+校验用户登录状态的实现逻辑
+
+![校验用户登录状态的逻辑](F:\BlockChain_Class\09.NodeJs\day05\校验用户登录状态的逻辑.png)
